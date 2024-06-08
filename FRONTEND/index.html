@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-VOTING DAPP</title>
+  <link rel="stylesheet" href="style2.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+  <div id="header">
+    <p id="message">Connect your Metamask wallet to vote.</p>
+    
+    <input id="walletconnect" type="button" value="Connect Wallet" onclick="Connect()">
+  </div>
+
+  <div id="content">
+    <div id="timer">
+      <p id="timerMssg"><span id="time">60</span>seconds left</p>
+    </div>
+    
+    <div id="tableCandidat">
+      <table id="candidate">
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+        
+      </table>
+    </div>
+
+    <div id="voteform">
+      <p>Select the ID of the Party you would like to vote for:</p>
+      <label>
+        <input type="number" id="vote"/>
+        <button id="confirm">Confirm Your Vote</button>
+      </label>
+    </div>
+
+    <div id="showResultcont">
+      <button id="showResult">Show Result</button>
+    </div>
+
+    <div id="result">
+      <table id="resultTab">
+        <tr>
+          <th>ID</th>
+          <th>Candidate</th>
+          <th>Number of votes</th>
+        </tr>
+        
+      </table>
+    </div>
+
+    <div id="owner">
+      <p id="ownerhd">Owner Only</p>
+      <div id="tools">
+        <div id="startElection">
+          <p id="startElectionmssg">Start the Election</p>
+          <input type="text" id="candidates" placeholder="Name of Candidate"/>
+          <input type="number" id="electionDuration" placeholder="duration in minutes"/>
+          <button id="start">Start Election</button>
+        </div>
+        <div>
+          <button id="resetVoterStatus" style="display:block;">Reset Voter Status</button>
+        <button id="stopElection" style="display:block;">Stop Election</button>
+        </div>
+        
+
+<div id="voteMsg"></div>
+
+      </div>
+    </div>
+    
+
+  </div>
+
+  <script src="testing.js"></script>
+</body>
+</html> 
